@@ -1,16 +1,16 @@
 #reading test data
-testX <- read.table(file = "./all/UCI HAR Dataset/test/X_test.txt")
-testY <- read.table(file = "./all/UCI HAR Dataset/test/Y_test.txt")
-testsubject <- read.table(file = "./all/UCI HAR Dataset/test/subject_test.txt")
+testX <- read.table(file = "./UCI HAR Dataset/test/X_test.txt")
+testY <- read.table(file = "./UCI HAR Dataset/test/Y_test.txt")
+testsubject <- read.table(file = "./UCI HAR Dataset/test/subject_test.txt")
 
 #reading train data
-trainX <- read.table(file = "./all/UCI HAR Dataset/train/X_train.txt")
-trainY <- read.table(file = "./all/UCI HAR Dataset/train/Y_train.txt")
-trainsubject <- read.table(file = "./all/UCI HAR Dataset/train/subject_train.txt")
+trainX <- read.table(file = "./UCI HAR Dataset/train/X_train.txt")
+trainY <- read.table(file = "./UCI HAR Dataset/train/Y_train.txt")
+trainsubject <- read.table(file = "./UCI HAR Dataset/train/subject_train.txt")
 
 #reading activity lables and features data
-activity <- read.table(file = "./all/UCI HAR Dataset/activity_labels.txt")
-features <- read.table(file = "./all/UCI HAR Dataset/features.txt")[,2]
+activity <- read.table(file = "./UCI HAR Dataset/activity_labels.txt")
+features <- read.table(file = "./UCI HAR Dataset/features.txt")[,2]
 
 #substituting activity number with activity name for test data
 testYlabels <- sapply(testY[,1],function(x) {as.character(activity[activity$V1==x,2])})
